@@ -1,0 +1,14 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu" ng-show="CMain.isLogin()">
+      <ng-md-icon icon="menu"></ng-md-icon>
+    </md-button>
+    <h3>
+      {{title}}
+    </h3>
+    <span flex=''></span>
+    <md-button aria-label="Logout" ng-show="CMain.isLogin()" ng-click="CMain.logout()">
+      <ng-md-icon icon="logout"></ng-md-icon>
+    </md-button>
+  </div>
+</md-toolbar>

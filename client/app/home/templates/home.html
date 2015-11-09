@@ -1,0 +1,12 @@
+
+<ng-include src="'app/home/templates/header.html'" style="top:0px"></ng-include>
+
+<md-content flex md-scroll-y>
+    <ui-view layout="column" layout-fill layout-padding>
+      <div class="inset" hide-sm></div>
+      	<section>
+			<a class="btn-bell" href="#active" id="active" ng-click="CHome.pencetBell()">&#xF011;</a>
+			<span></span>
+		</section>
+	</ui-view>
+</md-content>

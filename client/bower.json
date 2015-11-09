@@ -1,0 +1,14 @@
+{
+  "name": "Seed Angular-Requirejs",
+  "version": "1.0.0",
+  "description": "AngularJs-RequireJs Seed",
+  "dependencies" : {
+    "requirejs": "*",
+
+    "angular": "1.4.*",
+    "angular-ui-router": "~0.2.15",
+	  "angular-material": "1.0.*",
+    "angular-material-icons": "0.6.0",
+    "angular-messages": "*"
+  }
+}

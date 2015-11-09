@@ -1,0 +1,19 @@
+
+<ng-include src="'app/home/templates/header.html'" style="top:0px"></ng-include>
+
+
+<md-content class="md-padding">
+    <md-card>
+      <md-card-content>
+        <h2 class="md-title">Anda sudah terdaftar!</h2>
+        <h3>Hallo, {{CAuth.data.fullname}}</h3>
+        <p>
+         	Kami akan memverifikasi E-Mail: <b>{{CAuth.data.email}}</b>, jika Account anda sudah diaktifkan oleh admin. Setelah itu silakan
+         	masuk kedalam Masjid dgn App ini!
+        </p>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-href='/login'>Login</md-button>
+      </md-card-actions>
+    </md-card>
+</md-content>

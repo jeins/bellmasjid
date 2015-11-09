@@ -1,0 +1,24 @@
+
+<ng-include src="'app/home/templates/header.html'" style="top:0px"></ng-include>
+
+
+<div layout="column" layout-sm="column" layout-align="center" class="bottom-sheet-demo inset">
+	<form name="loginForm" role="form" layout="column" layout-sm="column">
+		<md-input-container flex="">
+	      	<label>E-Mail</label>
+	      	<input id="inpEmail" name="email" type="email" ng-model="CAuth.data.email" required="required" class="form-control"/>
+	      	<div ng-messages="loginForm.email.$error">
+	        	<div ng-message="required">Email is required!</span></div>
+	      	</div>
+	    </md-input-container>
+	    <md-input-container flex="">
+	      	<label>Password</label>
+	      	<input id="inpPassword" name="password" type="password" ng-model="CAuth.data.password" required="required" class="form-control"/>
+	      	<div ng-messages="loginForm.password.$error">
+	        	<div ng-message="required">Password is required!</span></div>
+	      	</div>
+	    </md-input-container>
+	</form>
+  	<md-button aria-label="Login" flex="" ng-click="CAuth.login()" class="md-primary md-raised">Login</md-button>
+  	<md-button aria-label="Register" flex="" ng-href="/register" class="md-raised">Register</md-button>
+</div>
