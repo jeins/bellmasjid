@@ -2,13 +2,13 @@ define(['../app.home'], function(app){
         'use strict';
 
         var name = 'SvcBukaPintu';
-        var depedencies = ['$http', '$q'];
-        var service = function($http, $q) {
+        var depedencies = ['$http', '$q', 'CONFIG'];
+        var service = function($http, $q, CONFIG) {
             function bukapintu(){
                 var deferred = $q.defer();
 
                 var req = {
-                    url: '/bellmasjid_s/v1/bukapintu',
+                    url:  CONFIG.http.host + '/v1/bukapintu',
                     method: 'GET',
                     data: ''
                 };

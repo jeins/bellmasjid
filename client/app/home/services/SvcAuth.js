@@ -2,15 +2,15 @@ define(['../app.home'], function(app){
         'use strict';
 
         var name = 'SvcAuth';
-        var depedencies = ['$http', '$q', 'SvcToken', 'SvcEncrypt'];
-        var service = function($http, $q, SvcToken, SvcEncrypt) {
+        var depedencies = ['$http', '$q', 'SvcToken', 'SvcEncrypt', 'CONFIG'];
+        var service = function($http, $q, SvcToken, SvcEncrypt, CONFIG) {
             function login(data){
                 var deferred = $q.defer();
 
                 data.password = SvcEncrypt.encodeRSA(data.password);
 
                 var req = {
-                    url: '/bellmasjid_s/v1/login',
+                    url: CONFIG.http.host + '/v1/login',
                     method: 'POST',
                     data: data
                 };
@@ -35,7 +35,7 @@ define(['../app.home'], function(app){
                 data.password = SvcEncrypt.encodeRSA(data.password);
 
                 var req = {
-                    url: '/bellmasjid_s/v1/register',
+                    url:  CONFIG.http.host + '/v1/register',
                     method: 'POST',
                     data: data
                 };
