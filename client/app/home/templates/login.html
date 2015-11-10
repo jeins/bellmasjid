@@ -6,14 +6,14 @@
 	<form name="loginForm" role="form" layout="column" layout-sm="column">
 		<md-input-container flex="">
 	      	<label>E-Mail</label>
-	      	<input id="inpEmail" name="email" type="email" ng-model="CAuth.data.email" required="required" class="form-control"/>
+	      	<input id="inpEmail" name="email" type="email" ng-model="data.email" required="required" class="form-control"/>
 	      	<div ng-messages="loginForm.email.$error">
 	        	<div ng-message="required">Email is required!</span></div>
 	      	</div>
 	    </md-input-container>
 	    <md-input-container flex="">
 	      	<label>Password</label>
-	      	<input id="inpPassword" name="password" type="password" ng-model="CAuth.data.password" required="required" class="form-control"/>
+	      	<input id="inpPassword" name="password" type="password" ng-model="data.password" required="required" class="form-control"/>
 	      	<div ng-messages="loginForm.password.$error">
 	        	<div ng-message="required">Password is required!</span></div>
 	      	</div>

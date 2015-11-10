@@ -6,21 +6,21 @@
 	<form name="registerForm" role="form" layout="column" layout-sm="column">
 		<md-input-container flex="">
 	      	<label>Nama Lengkap</label>
-	      	<input name="fullname" type="text" ng-model="CAuth.data.fullname" required="required" class="form-control"/>
+	      	<input name="fullname" type="text" ng-model="data.fullname" required="required" class="form-control"/>
 	      	<div ng-messages="registerForm.fullname.$error">
 	        	<div ng-message="required">Fullname is required!</span></div>
 	      	</div>
 	    </md-input-container>
 		<md-input-container flex="">
 	      	<label>E-Mail</label>
-	      	<input name="email" type="email" ng-model="CAuth.data.email" required="required" class="form-control"/>
+	      	<input name="email" type="email" ng-model="data.email" required="required" class="form-control"/>
 	      	<div ng-messages="registerForm.email.$error">
 	        	<div ng-message="required">Email is required!</span></div>
 	      	</div>
 	    </md-input-container>
 	    <md-input-container flex="">
 	      	<label>Password</label>
-	      	<input name="password" type="password" ng-model="CAuth.data.password" required="required" class="form-control"/>
+	      	<input name="password" type="password" ng-model="data.password" required="required" class="form-control"/>
 	      	<div ng-messages="registerForm.password.$error">
 	        	<div ng-message="required">Password is required!</span></div>
 	      	</div>
