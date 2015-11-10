@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- META -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
-		<title>Buka Pintu!</title>
+	<title>Buka Pintu!</title>
 
-		<!-- LOAD CSS -->
-		<link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
-		<link rel="stylesheet" href="css/styles.css">
+	<!-- LOAD CSS -->
+	<link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 
-		<base href="/">
+	<base href="/">
 
-	</head>
-	<!-- SET THE MAIN CONTROLLER -->
-	<body layout="row" ng-controller="CtrlMain as CMain">
-		
-		<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-show="CMain.isLogin()">
-			<md-toolbar class="md-tall md-hue-2">
-		    	<span flex></span>
-		        <div layout="column" class="md-toolbar-tools-bottom inset">
-		          	<user-avatar></user-avatar>
-		        	<span></span>
-		          	<div>Firstname Lastname</div>
-		          	<div>email@domainname.com</div>
-		        </div>
-		  	</md-toolbar>
-		  	<md-list>
-		  		<md-item>
-		  			<a>
-			        	<md-item-content md-ink-ripple layout="row" layout-align="start center">
-			            	<div class="inset">
-			              		<ng-md-icon icon="settings"></ng-md-icon>
-			            	</div>
-				            <div class="inset">Profile</div>
-			          	</md-item-content>
-			        </a>
-		  		</md-item>
-			</md-list>
-		</md-sidenav>
+</head>
+<!-- SET THE MAIN CONTROLLER -->
+<body layout="row" ng-controller="CtrlMain as CMain">
 
-	    <div layout="column" class="ui-view-container" layout-fill ui-view>
-    	</div>
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-show="CMain.isLogin()">
+	<md-toolbar class="md-tall md-hue-2">
+		<span flex></span>
+		<div layout="column" class="md-toolbar-tools-bottom inset">
+			<user-avatar></user-avatar>
+			<span></span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<md-list-item>
+			<a ng-href="#" drtv-activelink>
+				<md-item-content md-ink-ripple layout="row" layout-align="start center">
+					<div class="inset">
+						<ng-md-icon icon="settings"></ng-md-icon>
+					</div>
+					<div class="inset">Profile</div>
+				</md-item-content>
+			</a>
+		</md-list-item>
 
-		<!-- LOAD RequireJS -->
-    	<script src="lib/requirejs/require.js" data-main="app/main"></script>
-	</body>
+		<md-list-item>
+			<a ng-href="/pending-users" drtv-activelink>
+				<md-item-content md-ink-ripple layout="row" layout-align="start center">
+					<div class="inset">
+						<ng-md-icon icon="people_outline"></ng-md-icon>
+					</div>
+					<div class="inset">Pending Users</div>
+				</md-item-content>
+			</a>
+		</md-list-item>
+		<md-divider></md-divider>
+	</md-list>
+</md-sidenav>
+
+<div layout="column" class="ui-view-container" layout-fill ui-view>
+</div>
+
+<!-- LOAD RequireJS -->
+<script src="lib/requirejs/require.js" data-main="app/main"></script>
+</body>
 </html>

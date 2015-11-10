@@ -27,6 +27,11 @@ define(['angular'], function (angular) {
                     templateUrl: 'app/home/templates/register_confirm.html',
                     controller: 'CtrlAuth as CAuth'
                 })
+                .state('pending-users', {
+                    url: '/pending-users',
+                    templateUrl: 'app/home/templates/pending_user_list.html',
+                    controller: 'CtrlAcceptUser as CAcceptUser'
+                })
     	}
 	]);
 

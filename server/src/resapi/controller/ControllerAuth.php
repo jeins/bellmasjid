@@ -119,6 +119,21 @@ class ControllerAuth extends Base {
 		}
 	}
 
+	public function getAllPendingUser(){
+		try{
+			if($this->getDB()->isJuruKunci($this->app->request()->headers->get('API-Token'))){
+				$users = $this->getDB()->query()->where('active', '=', 0)->get(['id_auth', 'fullname', 'email'])->toArray();
+				if(count($users) > 0){
+					$this->writeToJSON(['new_user'=> true, 'total_users'=>count($users),'users'=>$users], 201);
+				} else{
+					$this->writeToJSON(['new_user' => false], 201);
+				}
+			}
+		} catch(\Exception $ex){
+			$this->writeToJSON(['errmsg' => 'service unavailable'], 503);
+		}
+	}
+
 	public function changePassword(){
 		
 	}

@@ -76,6 +76,12 @@ class Routing {
                     }
                 );
 
+                $app->get('/pending-users',
+                    function() use($ctrlAuth){
+                        $ctrlAuth->getAllPendingUser();
+                    }
+                );
+
                 ### DELETE
                 $app->delete('/user/:USER_ID',
                     function($USER_ID) use($ctrlAuth){
