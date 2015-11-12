@@ -8,7 +8,7 @@ define(['angular'], function (angular) {
             'appPath': 'app/'
         },
         'http': {
-            'host': 'http://bellmasjid_s.127.0.0.1.xip.io/',
+            'host': 'http://server.clore.de/',
             'header': {
                 'token': 'API-Token',
                 'auth': 'WWW-Authorization',
